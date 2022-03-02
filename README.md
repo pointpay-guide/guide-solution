@@ -65,6 +65,38 @@ https://www.pointpay.im/solution/result 입력
 
 <br/>
 
+## 카페24 이벤트 전환 버튼 추가 방법
+아래의 코드를 전부 넣어주세요.
+
+**html**
+ ```html
+<button id="pp_btn">제휴포인트할인</button>
+ ```
+ 
+**js**
+ ```js
+document.getElementById("pp_btn").addEventListener('click',pp_event);
+
+function pp_event(){
+ member = JSON.parse(sessionStorage.getItem('member_1'));
+
+     if(member == null){
+       alert("일시적인 오류가 발생했습니다.\n고객센터에 문의해주세요.");   
+       return false;
+     } 
+ 
+     user_id = member['data']['member_id'];
+    
+    if(user_id == null){
+      alert("일시적인 오류가 발생했습니다.\n고객센터에 문의해주세요.");    
+      return false;
+    }
+    
+    window.open('https://ssl.pointpay.im/pointhub/direct?a_code=whatbaseball&user_id='+user_id ,  'cert2_popup', 'width=765, height=895, resizable=auto, scrollbars=yes, status=no');
+}
+ 
+ ```
+</br>
 
 ## 포인트 전환 후
 전환 후 해당 계정에 적립금이 자동으로 지급됩니다.(약 1분 뒤)
