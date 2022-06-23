@@ -92,7 +92,7 @@ function pp_event(){
       return false;
     }
     
-    window.open('https://ssl.pointpay.im/pointhub/direct?a_code=whatbaseball&user_id='+user_id ,  'cert2_popup', 'width=765, height=895, resizable=auto, scrollbars=yes, status=no');
+    window.open('https://ssl.pointpay.im/pointhub/direct?a_code=매체아이디값&user_id='+user_id ,  'cert2_popup', 'width=765, height=895, resizable=auto, scrollbars=yes, status=no');
 }
  
  ```
